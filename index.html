@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#0F2A4F">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ceremonia de Titulación ENFA 2026">
-<meta property="og:description" content="Viernes 11 de diciembre · 19:00 hrs · Programa, graduandos y fotos">
+<meta property="og:description" content="Jueves 26 de noviembre · 19:00 hrs · Auditorio Espacio CEA, Providencia">
 <meta property="og:image" content="https://titulacion.enfa.cl/preview.jpg">
 <meta property="og:url" content="https://titulacion.enfa.cl/">
 <link rel="icon" href="img/escudo.png">
@@ -187,9 +187,9 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
   body{background:#fff;font-size:10pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .borrador,.tabs,.actions,.countdown,#galeria,#compartir,#info,.search,.stats,.nota,.vacio,footer .redes{display:none!important}
   .top{border:0;padding:0 0 6pt}
-  .top img{height:40pt}
-  .hero{background:none;color:var(--navy);padding:4pt 0 0}
-  .hero h1{font-size:30pt}
+  .top img{height:34pt}
+  .hero{background:none;color:var(--navy);padding:2pt 0 0}
+  .hero h1{font-size:27pt}
   .promo{color:var(--gold-ink);font-size:15pt}
   .rule{margin:8pt auto}
   .where{opacity:1}
@@ -201,20 +201,20 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
   #programa{padding-top:10pt}
   #programa .head p{display:none}
   .timeline{padding:2pt 0 0}
-  .timeline li{grid-template-columns:42pt 14pt 1fr;column-gap:8pt;padding-bottom:5.5pt;break-inside:avoid}
+  .timeline li{grid-template-columns:42pt 14pt 1fr;column-gap:8pt;padding-bottom:4pt;break-inside:avoid}
   .t-time{font-size:10pt;line-height:1.45}
   .t-dot::before{top:3pt;width:9pt;height:9pt;left:2pt}
   .t-dot::after{left:6pt;top:13pt;bottom:-7pt}
   .t-body h3{display:inline;font-size:10pt}
   .t-body p{display:inline;font-size:9pt}
   .t-body p::before{content:" · "}
-  #graduandos{padding-top:16pt}
+  #graduandos{padding-top:10pt}
   .head{break-after:avoid}
   details.carrera{border:0;border-top:1px solid var(--line);border-radius:0;margin-top:6pt}
   details.carrera summary{padding:6pt 0;break-after:avoid}
   summary .chev{display:none}
   ul.nombres{columns:3;padding:0}
-  ul.nombres li{padding:2pt 0;border:0;font-size:9pt}
+  ul.nombres li{padding:1.5pt 0;border:0;font-size:9pt}
   #distinciones{padding-top:10pt}
   #distinciones .head p{display:none}
   .premios{grid-template-columns:1fr 1fr;gap:6pt}
@@ -222,7 +222,9 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
   .premio::after{display:none}
   .premio .eyebrow{color:var(--gold-ink)}
   .premio h3{font-size:13pt}
-  #mensaje{break-before:page}
+  #oradores{break-before:page}
+  #oradores .mesa{grid-template-columns:1fr 1fr;gap:4pt}
+  #oradores .mesa div{padding:6pt 8pt}
   .mensaje{padding:6pt 12pt}
   .mensaje p{font-size:11.5pt}
   footer{margin-top:18pt;padding:10pt 0 0;border-top:1px solid var(--gold-deep)}
@@ -280,7 +282,8 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
     <a href="#graduandos">Graduandos</a>
     <a href="#distinciones">Distinciones</a>
     <a href="#galeria">Galería</a>
-    <a href="#mensaje">Mensaje</a>
+    <a href="#oradores">Oradores</a>
+    <a href="#enfa">Sobre ENFA</a>
     <a href="#info">Información</a>
   </div>
 </nav>
@@ -314,11 +317,14 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
     <div class="galeria" id="fotos"></div>
   </section>
 
-  <section id="mensaje">
-    <div class="head"><p class="eyebrow">Palabras</p><h2 id="msj-titulo"></h2></div>
-    <div class="card mensaje" id="msj"></div>
-    <div class="head" style="margin:40px 0 0"><p class="eyebrow">Ceremonia</p><h2 style="font-size:1.8rem">Mesa de honor</h2></div>
+  <section id="oradores">
+    <div class="head"><p class="eyebrow">Participan</p><h2>Oradores</h2></div>
     <div class="mesa" id="mesa"></div>
+  </section>
+
+  <section id="enfa">
+    <div class="head"><p class="eyebrow">Escuela de Negocios</p><h2>Sobre ENFA</h2></div>
+    <div class="card mensaje" id="msj"></div>
     <p class="gracias" id="gracias"></p>
   </section>
 
@@ -364,105 +370,72 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
    BORRADOR: nombres, horarios, fotos y textos son de EJEMPLO.
    ===================================================================== */
 const CONFIG = {
-  borrador: true,                                   // false = quita el aviso amarillo
+  borrador: false,                                  // true = muestra el aviso amarillo de borrador
   urlPublica: 'https://titulacion.enfa.cl',         // dirección definitiva (la que va en el QR)
-  institucion: 'ENFA Universitas',
+  institucion: 'ENFA Escuela de Negocios',
   titulo: 'Ceremonia de Titulación',
   promocion: 'Promoción 2026',
-  fechaTexto: 'Viernes 11 de diciembre de 2026',
+  fechaTexto: 'Jueves 26 de noviembre de 2026',
   horaTexto: '19:00 hrs',
-  inicio: '2026-12-11T19:00:00-03:00',              // hora de Chile (verano = UTC-3)
-  fin:    '2026-12-11T22:00:00-03:00',
-  lugar: 'Aula Magna ENFA Universitas',
-  direccion: 'Av. Bellavista 0379, Providencia',
-  mapa: 'https://www.google.com/maps/search/?api=1&query=Av.+Bellavista+0379,+Providencia,+Santiago',
+  inicio: '2026-11-26T18:30:00-03:00',              // hora de Chile (verano = UTC-3)
+  fin:    '2026-11-26T21:00:00-03:00',
+  lugar: 'Auditorio Espacio CEA',
+  direccion: 'Antonio Bellet 314, Providencia',
+  mapa: 'https://www.google.com/maps/search/?api=1&query=Antonio+Bellet+314,+Providencia,+Santiago,+Chile',
 
   // tipo: 'diplomas' (punto dorado) · 'cierre' (punto azul) · '' (normal)
   programa: [
-    { hora:'18:30', titulo:'Recepción de invitados', detalle:'Acreditación en el hall de acceso' },
-    { hora:'19:00', titulo:'Ingreso de los graduandos', detalle:'Marcha de entrada' },
-    { hora:'19:05', titulo:'Himno Nacional de Chile' },
-    { hora:'19:10', titulo:'Palabras de bienvenida', detalle:'Rector de ENFA Universitas' },
-    { hora:'19:20', titulo:'Saludo del invitado de honor', detalle:'Representante de la industria farmacéutica' },
-    { hora:'19:30', titulo:'Entrega de diplomas', detalle:'Visitador Médico', tipo:'diplomas' },
-    { hora:'19:45', titulo:'Entrega de diplomas', detalle:'Asesor Científico (online)', tipo:'diplomas' },
-    { hora:'19:55', titulo:'Momento musical', detalle:'Intervención artística' },
-    { hora:'20:05', titulo:'Entrega de diplomas', detalle:'Auxiliar de Farmacia', tipo:'diplomas' },
-    { hora:'20:20', titulo:'Entrega de diplomas', detalle:'Dermo Coach Farmacia y Belleza', tipo:'diplomas' },
-    { hora:'20:30', titulo:'Reconocimientos y distinciones', detalle:'Premios a graduandos destacados' },
-    { hora:'20:40', titulo:'Palabras de la promoción', detalle:'Graduanda representante del curso' },
-    { hora:'20:50', titulo:'Cierre y fotografía oficial', detalle:'Foto de la Promoción 2026 en el escenario' },
-    { hora:'21:00', titulo:'Cóctel de celebración', detalle:'Salón principal', tipo:'cierre' }
+    { hora:'18:30', titulo:'Recepción de invitados y titulados' },
+    { hora:'19:00', titulo:'Himno de Chile' },
+    { hora:'19:10', titulo:'Mensaje de Graduación', detalle:'Sr. Raúl Dalbadie Schroeder · Rector Escuela de Negocios ENFA' },
+    { hora:'19:20', titulo:'Discurso de Graduación', detalle:'Estefany Mundaca · Estudiante Escuela de Negocios ENFA' },
+    { hora:'19:30', titulo:'Entrega de Diplomas', tipo:'diplomas' },
+    { hora:'19:40', titulo:'Premios Especiales', tipo:'diplomas' },
+    { hora:'20:10', titulo:'Acto Cultural' },
+    { hora:'20:20', titulo:'Discurso Docente', detalle:'Marcelo Molina' },
+    { hora:'20:40', titulo:'Palabras para los colegas Visitadores Médicos', detalle:'Sra. Verónica Sandoval Chocano · Directora Académica y Vinculación, Escuela de Negocios ENFA' },
+    { hora:'20:50', titulo:'Despedida', tipo:'cierre' }
   ],
 
   // Un asterisco (*) al final del nombre marca a quien recibe una distinción
   carreras: [
     { nombre:'Visitador Médico', graduandos:[
-      'Camila Andrea Rojas Fuentes*','Matías Ignacio Soto Herrera','Valentina Paz Muñoz Contreras','Sebastián Alejandro Díaz Morales',
-      'Francisca Belén Torres Vergara','Diego Andrés Reyes Castillo','Constanza Isidora Araya Pizarro','Felipe Tomás Espinoza Lagos',
-      'Javiera Antonia Navarro Bustos','Nicolás Esteban Carrasco Salinas','Catalina Fernanda Vidal Orellana','Benjamín José Riquelme Tapia',
-      'María José Saavedra Cáceres','Cristóbal Andrés Paredes Gallardo','Daniela Ignacia Figueroa Molina','Tomás Alonso Sepúlveda Rivas' ]},
-    { nombre:'Asesor Científico (online)', graduandos:[
-      'Andrés Felipe Moya Concha','Natalia Verónica Bravo Salgado*','Pablo Ignacio Medina Arriagada','Ximena Alejandra Toledo Campos',
-      'Mauricio Patricio Aravena Núñez','Lorena Isabel Cornejo Villalobos','Ricardo Esteban Bustamante Soto','Carla Daniela Jiménez Pozo' ]},
-    { nombre:'Auxiliar de Farmacia', graduandos:[
-      'Antonia Sofía Gutiérrez León*','Joaquín Eduardo Valenzuela Ortiz','Fernanda Alejandra Pérez Jara','Ignacio Rodrigo Flores Bravo',
-      'Martina Josefa Castro Aguilera','Rodrigo Hernán Leiva Cortés','Paula Andrea Miranda Olivares','Vicente Alberto Garrido Fuentealba',
-      'Carolina Beatriz Alarcón Toro','Gabriel Antonio Zúñiga Peña','Macarena Soledad Henríquez Vega','Héctor Manuel Cárdenas Ríos',
-      'Bárbara Constanza Sanhueza Mella','Luis Felipe Ortega Yáñez' ]},
-    { nombre:'Dermo Coach Farmacia y Belleza', graduandos:[
-      'Florencia Ignacia Cifuentes Parra*','Josefa Valentina Godoy Arancibia','Renata Paz Escobar Lillo','Pía Alejandra Sanzana Mora',
-      'Gabriela Fernanda Ulloa Quiroz','Trinidad Belén Maturana Reyes','Amanda Sofía Ibarra Correa','Claudia Marcela Pino Montecinos',
-      'Karina Andrea Vásquez Huerta','Emilia Antonia Fuenzalida Rojas' ]}
+      'Romina Angelina Acevedo Poblete','María José Baeza Sepúlveda','Catalina Paz Carrasco Parra','Dunipsy Lorena Cortez Romero',
+      'Cristel Selomit Fernández Ormeño','Carol Edgardy Fuentes Salgado','Francisca Tamara Gálvez Vidal','Pamela Andrea Garcés Muñoz',
+      'Karina Mabel González Fuentes','Yulmelia Alejandra Gudiño Ramírez','Pierangela Liseth Guerra La Rosa','Daniela Soledad Gutiérrez Orrego',
+      'Sofía Catalina Hinrichsen Carrasco','María Rosa Del Carmen Justo Valdéz','César Augusto Morales Medina','Yordy Romario Morales Navarro',
+      'Estefany Suggey Mundaca Leyva','Maydaleth Auxiliadora Pachano Navarro','Debora Camila Riffo Sepúlveda','Nicole Yanet Rodríguez González',
+      'Patricia Esther Rodríguez Rivas','Yosleiny Gabriela Rojas Muñoz','Abigail Rozas Velásquez','Rosangel Mariana Sulbaran Silva' ]}
   ],
 
-  distinciones: [
-    { premio:'Mejor promedio de la promoción', nombre:'Camila Andrea Rojas Fuentes', detalle:'Visitador Médico · Nota final 6,8' },
-    { premio:'Excelencia en práctica profesional', nombre:'Antonia Sofía Gutiérrez León', detalle:'Auxiliar de Farmacia' },
-    { premio:'Mejor proyecto de titulación', nombre:'Natalia Verónica Bravo Salgado', detalle:'Asesor Científico (online)' },
-    { premio:'Premio Espíritu ENFA', nombre:'Florencia Ignacia Cifuentes Parra', detalle:'Dermo Coach Farmacia y Belleza · Compañerismo y compromiso' }
+  // Vacío = la sección no se muestra. Formato: { premio:'', nombre:'', detalle:'' }
+  distinciones: [],
+
+  // Vacío = la sección no se muestra. Formato: { src:'img/galeria/01.jpg', texto:'' }
+  galeriaNota: '',
+  galeria: [],
+
+  oradores: [
+    { cargo:'Rector · Escuela de Negocios ENFA', nombre:'Sr. Raúl Dalbadie Schroeder' },
+    { cargo:'Directora Académica y Vinculación', nombre:'Sra. Verónica Sandoval Chocano' },
+    { cargo:'Discurso docente', nombre:'Marcelo Molina' },
+    { cargo:'Discurso de graduación · Estudiante', nombre:'Estefany Mundaca' }
   ],
 
-  galeriaNota: 'Fotos referenciales de banco de imágenes: se reemplazan por fotos reales de los alumnos.',
-  galeria: [
-    { src:'img/galeria/01.jpg', texto:'Clase de farmacología' },
-    { src:'img/galeria/02.jpg', texto:'Taller de técnicas de presentación' },
-    { src:'img/galeria/03.jpg', texto:'Práctica profesional en farmacia' },
-    { src:'img/galeria/04.jpg', texto:'Atención de público en mesón' },
-    { src:'img/galeria/05.jpg', texto:'Laboratorio de dermocosmética' },
-    { src:'img/galeria/06.jpg', texto:'Clases en línea · Campus ENFA 24/7' },
-    { src:'img/galeria/07.jpg', texto:'Role play de visita médica' },
-    { src:'img/galeria/08.jpg', texto:'Visita a médicos' }
+  sobre: [
+    'Cada día más profesionales con futuro',
+    'ENFA es una institución de formación orientada a potenciar las competencias profesionales gracias a su propuesta educativa centrada en metodologías modernas (incluyendo modalidades presencial y online).',
+    'La misión de ENFA es formar profesionales y líderes con competencias actualizadas para integrarse con éxito al mundo productivo y empresarial, poniendo especial énfasis en los sectores económicos con impacto regional.',
+    'Su visión es ser reconocida como una institución de referencia en formación continua en Chile, destacada por su innovación metodológica, el vínculo con el entorno productivo y su contribución al desarrollo del capital humano en las organizaciones.',
+    'Además, ENFA es un Organismo Técnico de Capacitación (OTEC), reconocido y acreditado ante el SENCE del Ministerio del Trabajo y Previsión Social.'
   ],
 
-  mensaje: {
-    titulo: 'Mensaje del Rector',
-    parrafos: [
-      'Queridos graduandos y familias:',
-      'Hoy celebramos el esfuerzo de quienes compatibilizaron trabajo, estudio y familia para llegar a esta noche. Cada uno de ustedes eligió formarse en un área donde el conocimiento y la confianza marcan la diferencia: la salud de las personas.',
-      'Les invitamos a ejercer con rigor, ética y cercanía, y a recordar que el aprendizaje no termina hoy. ENFA seguirá siendo su casa.',
-      'A sus familias, gracias por el apoyo que hizo posible este logro. ¡Felicitaciones, Promoción 2026!'
-    ],
-    firma: 'Rector',
-    cargo: 'ENFA Universitas'
-  },
-
-  // nombre vacío = se muestra "Nombre por confirmar"
-  mesa: [
-    { cargo:'Rector', nombre:'' },
-    { cargo:'Directora Académica', nombre:'' },
-    { cargo:'Invitado de honor', nombre:'' },
-    { cargo:'Coordinación de programas', nombre:'' }
-  ],
-
-  agradecimientos: 'Agradecemos a nuestros docentes y relatores, a los laboratorios, farmacias y empresas que abrieron sus puertas para las prácticas, y a cada familia que acompañó este camino.',
+  agradecimientos: 'Agradecemos a nuestros docentes y relatores, a las empresas e instituciones que confían en ENFA, y a cada familia que acompañó este camino.',
 
   info: [
-    { icono:'clock', titulo:'Llegada', texto:'Te recomendamos llegar a las 18:30. La ceremonia comienza a las 19:00.' },
-    { icono:'gown',  titulo:'Graduandos', texto:'Presentarse a las 18:00 en la Sala 2 para recibir toga y birrete.' },
-    { icono:'shirt', titulo:'Vestimenta', texto:'Formal.' },
-    { icono:'metro', titulo:'Cómo llegar', texto:'Metro Baquedano (Líneas 1 y 5). Estacionamiento limitado.', link:'mapa', linkTexto:'Abrir mapa' },
-    { icono:'cam',   titulo:'Fotografías', texto:'Las fotos oficiales se publicarán en esta misma página a partir del lunes 14 de diciembre.' },
+    { icono:'clock', titulo:'Horario', texto:'Recepción desde las 18:30. La ceremonia comienza a las 19:00.' },
+    { icono:'pin',   titulo:'Lugar', texto:'Auditorio Espacio CEA · Antonio Bellet 314, Providencia.', link:'mapa', linkTexto:'Abrir mapa' },
+    { icono:'cal',   titulo:'Fecha', texto:'Jueves 26 de noviembre de 2026.' },
     { icono:'chat',  titulo:'Consultas', texto:'WhatsApp +56 9 9441 9258', link:'https://wa.me/56994419258', linkTexto:'Escribir por WhatsApp' }
   ],
 
@@ -522,7 +495,7 @@ const CONFIG = {
     nombre: c.nombre,
     lista: c.graduandos.map(g => { total++; const d = /\*$/.test(g); const n = g.replace(/\*$/, '').trim(); return { n, d, k: norm(n) }; })
   }));
-  $('stats').textContent = total + ' graduandos · ' + datos.length + ' programas';
+  $('stats').textContent = total + ' graduandos' + (datos.length > 1 ? ' · ' + datos.length + ' programas' : '');
   $('carreras').innerHTML = datos.map((c, i) => `
     <details class="carrera" open data-i="${i}">
       <summary><span class="nom">${esc(c.nombre)}</span><span class="cnt">${c.lista.length}</span>${icon('chev', 'chev')}</summary>
@@ -573,13 +546,18 @@ const CONFIG = {
   $('visor-in').addEventListener('pointerdown', e => { x0 = e.clientX; });
   $('visor-in').addEventListener('pointerup', e => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 50) ver(actual + (dx < 0 ? 1 : -1)); });
 
-  // Mensaje, mesa, agradecimientos
-  $('msj-titulo').textContent = C.mensaje.titulo;
-  $('msj').innerHTML = C.mensaje.parrafos.map(p => `<p>${esc(p)}</p>`).join('') +
-    `<div class="firma">${esc(C.mensaje.firma)}<span>${esc(C.mensaje.cargo)}</span></div>`;
-  $('mesa').innerHTML = C.mesa.map(m => `
+  // Oradores, Sobre ENFA, agradecimientos
+  $('mesa').innerHTML = C.oradores.map(m => `
     <div class="card"><p class="eyebrow">${esc(m.cargo)}</p>${m.nombre ? `<strong>${esc(m.nombre)}</strong>` : '<strong class="pend">Nombre por confirmar</strong>'}</div>`).join('');
+  $('msj').innerHTML = C.sobre.map(p => `<p>${esc(p)}</p>`).join('');
   $('gracias').textContent = C.agradecimientos;
+
+  // Secciones sin datos: se ocultan junto con su pestaña
+  const ocultar = id => { $(id).hidden = true; const t = document.querySelector('.tabs a[href="#' + id + '"]'); if (t) t.hidden = true; };
+  if (!C.distinciones.length) ocultar('distinciones');
+  if (!C.galeria.length) ocultar('galeria');
+  if (!C.oradores.length) ocultar('oradores');
+  if (!C.sobre.length) ocultar('enfa');
 
   // Información
   $('info-list').innerHTML = C.info.map(it => {
