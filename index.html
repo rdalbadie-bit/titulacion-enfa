@@ -133,10 +133,11 @@ mark{background:rgba(232,207,69,.5);color:inherit;border-radius:3px;padding:0 1p
 /* Galería */
 .galeria{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 @media (min-width:640px){.galeria{grid-template-columns:repeat(3,1fr)}}
-.galeria button{padding:0;border:0;border-radius:10px;overflow:hidden;background:var(--line);aspect-ratio:4/3}
-.galeria button:first-child{grid-column:span 2;aspect-ratio:auto}
-@media (max-width:639px){.galeria button:last-child:nth-child(even){grid-column:span 2;aspect-ratio:16/9}}
-.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.galeria button{position:relative;padding:0;border:0;border-radius:10px;overflow:hidden;background:var(--line);aspect-ratio:1/1}
+.galeria button:first-child{grid-column:span 2;aspect-ratio:4/3}
+@media (max-width:639px){.galeria button:last-child:nth-child(even){grid-column:span 2;aspect-ratio:4/3}}
+@media (min-width:640px){.galeria button:first-child{grid-row:span 2;aspect-ratio:auto}}
+.galeria img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .35s}
 .galeria button:hover img{transform:scale(1.04)}
 dialog.visor{width:100%;height:100%;max-width:100vw;max-height:100vh;margin:0;padding:0;border:0;background:rgba(6,16,34,.985);color:#fff}
 dialog.visor::backdrop{background:transparent}
@@ -321,7 +322,7 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
   </section>
 
   <section id="galeria">
-    <div class="head"><p class="eyebrow">Recuerdos</p><h2>Nuestros alumnos</h2><p id="gal-sub">Momentos de clases, talleres y prácticas.</p></div>
+    <div class="head"><p class="eyebrow">Recuerdos</p><h2>Nuestros alumnos</h2><p id="gal-sub">Momentos de la Promoción 2026. Toca una foto para verla en grande.</p></div>
     <div class="galeria" id="fotos"></div>
   </section>
 
@@ -428,8 +429,16 @@ const CONFIG = {
   distinciones: [],
 
   // Vacío = la sección no se muestra. Formato: { src:'img/galeria/01.jpg', texto:'' }
+  // src = foto grande (visor) · mini = miniatura de la grilla
   galeriaNota: '',
-  galeria: [],
+  galeria: [
+    { src:'img/galeria/01.jpg', mini:'img/galeria/mini/01.jpg', texto:'Celebración de la promoción' },
+    { src:'img/galeria/02.jpg', mini:'img/galeria/mini/02.jpg', texto:'Feria de stands' },
+    { src:'img/galeria/03.jpg', mini:'img/galeria/mini/03.jpg', texto:'Feria de stands' },
+    { src:'img/galeria/04.jpg', mini:'img/galeria/mini/04.jpg', texto:'Feria de stands' },
+    { src:'img/galeria/05.jpg', mini:'img/galeria/mini/05.jpg', texto:'Encuentro de la promoción' },
+    { src:'img/galeria/06.jpg', mini:'img/galeria/mini/06.jpg', texto:'Celebración de la promoción', pos:'50% 85%' }
+  ],
 
   oradores: [
     { cargo:'Rector · Escuela de Negocios ENFA', nombre:'Sr. Raúl Dalbadie Schroeder' },
@@ -556,8 +565,13 @@ const CONFIG = {
 
   // Galería + visor
   if (C.borrador && C.galeriaNota) $('gal-sub').textContent = C.galeriaNota;
-  $('fotos').innerHTML = C.galeria.map((f, i) => `
-    <button type="button" data-i="${i}" aria-label="Ampliar foto: ${esc(f.texto)}"><img src="${esc(f.src)}" alt="${esc(f.texto)}" loading="lazy"></button>`).join('');
+  // Las fotos que ocupan todo el ancho (primera y última) usan la versión grande para verse nítidas
+  $('fotos').innerHTML = C.galeria.map((f, i) => {
+    const ancha = i === 0 || i === C.galeria.length - 1;
+    const img = ancha || !f.mini ? f.src : f.mini;
+    return `
+    <button type="button" data-i="${i}" aria-label="Ampliar foto: ${esc(f.texto)}"><img src="${esc(img)}" alt="${esc(f.texto)}" loading="lazy"${f.pos ? ` style="object-position:${esc(f.pos)}"` : ''}></button>`;
+  }).join('');
   const visor = $('visor'); let actual = 0;
   const ver = i => { actual = (i + C.galeria.length) % C.galeria.length; const f = C.galeria[actual]; $('v-img').src = f.src; $('v-img').alt = f.texto; $('v-txt').textContent = f.texto + '  ·  ' + (actual + 1) + ' / ' + C.galeria.length; };
   $('fotos').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; ver(+b.dataset.i); visor.showModal(); });
