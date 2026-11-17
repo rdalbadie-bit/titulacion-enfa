@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ceremonia de Titulación 2026 · ENFA Universitas</title>
+<meta name="description" content="Programa, graduandos y fotos de la Ceremonia de Titulación ENFA Universitas 2026.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0F2A4F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ceremonia de Titulación ENFA 2026">
+<meta property="og:description" content="Viernes 11 de diciembre · 19:00 hrs · Programa, graduandos y fotos">
+<meta property="og:image" content="https://titulacion.enfa.cl/preview.jpg">
+<meta property="og:url" content="https://titulacion.enfa.cl/">
+<link rel="icon" href="img/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B3A6B; --navy-deep:#0F2A4F; --navy-soft:#24487F;
+  --gold:#E8CF45; --gold-deep:#C9A832; --gold-ink:#86690F;
+  --paper:#F7F5EF; --card:#FFFFFF; --ink:#18233A; --muted:#5A6476; --line:#E4DFD1; --line-soft:#EFEBE0;
+  --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans:'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ico{width:1.1em;height:1.1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Aviso de borrador */
+.borrador{background:var(--gold);color:var(--navy-deep);text-align:center;font-size:.74rem;font-weight:700;letter-spacing:.04em;padding:7px 16px}
+
+/* Cabecera y portada */
+.top{background:#fff;padding:14px 16px;display:flex;justify-content:center;border-bottom:3px solid var(--gold-deep)}
+.top img{height:46px;width:auto}
+.hero{position:relative;color:#fff;text-align:center;padding:56px 20px 46px;
+  background:linear-gradient(180deg,rgba(15,42,79,.80) 0%,rgba(15,42,79,.88) 55%,rgba(15,42,79,.97) 100%),url(img/portada.jpg) center 28%/cover no-repeat}
+.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin:0}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,11vw,4.6rem);line-height:1;margin:.28em 0 .12em;letter-spacing:.005em}
+.promo{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.4rem,5.5vw,1.9rem);color:var(--gold);margin:0}
+.rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:22px auto}
+.rule::before,.rule::after{content:"";height:1px;width:56px;background:var(--gold-deep)}
+.rule i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.when{font-weight:600;font-size:1.05rem;margin:0}
+.when.hora{color:var(--gold);font-size:1.25rem;margin-top:2px}
+@media print{.when.hora{color:var(--navy)}}
+.where{margin:.35em 0 0;font-size:.93rem;opacity:.9}
+.countdown{display:inline-block;margin-top:20px;padding:6px 16px;border:1px solid rgba(232,207,69,.55);border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold)}
+.countdown:empty{display:none}
+.actions{display:grid;gap:10px;max-width:420px;margin:26px auto 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 18px;border-radius:12px;font-weight:600;font-size:.92rem;text-decoration:none;border:1.5px solid transparent;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn-gold{background:var(--gold);color:var(--navy-deep)}
+.btn-gold:hover{background:#F0DA62}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn-line:hover{background:rgba(255,255,255,.08)}
+@media (min-width:640px){.actions{grid-template-columns:repeat(3,1fr);max-width:760px}.hero .btn{white-space:nowrap}}
+
+/* Pestañas fijas */
+.tabs{position:sticky;top:0;z-index:20;background:var(--navy-deep);box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.tabs-in{display:flex;gap:6px;overflow-x:auto;padding:9px 12px;scrollbar-width:none;max-width:860px;margin:0 auto}
+.tabs-in::-webkit-scrollbar{display:none}
+.tabs a{flex:none;color:rgba(255,255,255,.82);text-decoration:none;font-size:.8rem;font-weight:600;padding:8px 14px;border-radius:999px;letter-spacing:.02em}
+.tabs a.on{background:var(--gold);color:var(--navy-deep)}
+@media (min-width:760px){.tabs-in{justify-content:center}}
+
+/* Secciones */
+main{max-width:760px;margin:0 auto;padding:0 16px}
+section{padding:52px 0 6px;scroll-margin-top:58px}
+.head{text-align:center;margin-bottom:26px}
+.head .eyebrow{color:var(--gold-ink)}
+.head h2{font-family:var(--serif);font-weight:600;font-size:2.35rem;line-height:1.05;color:var(--navy);margin:.2em 0 .15em}
+.head p{color:var(--muted);font-size:.9rem;margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px}
+
+/* Programa */
+.timeline{list-style:none;margin:0;padding:26px 16px 10px}
+.timeline li{display:grid;grid-template-columns:58px 18px 1fr;column-gap:12px;padding-bottom:20px;position:relative}
+.t-time{font-weight:700;color:var(--navy);text-align:right;font-variant-numeric:tabular-nums;font-size:.95rem;line-height:1.5}
+.t-dot{position:relative}
+.t-dot::before{content:"";position:absolute;left:3px;top:5px;width:12px;height:12px;border-radius:50%;border:2px solid var(--gold-deep);background:#fff;box-sizing:border-box;z-index:1}
+.t-dot::after{content:"";position:absolute;left:8px;top:19px;bottom:-22px;width:2px;background:var(--line)}
+.timeline li:last-child .t-dot::after{display:none}
+.timeline li.diplomas .t-dot::before{background:var(--gold);border-color:var(--gold-deep)}
+.timeline li.cierre .t-dot::before{background:var(--navy);border-color:var(--navy)}
+.t-body h3{margin:0;font-size:1rem;font-weight:600;line-height:1.45;color:var(--ink)}
+.t-body p{margin:2px 0 0;color:var(--muted);font-size:.87rem}
+.tag{display:inline-block;margin-top:6px;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);background:#FBF5D8;border-radius:6px;padding:3px 8px}
+.nota{color:var(--muted);font-size:.8rem;text-align:center;margin:14px 0 0}
+
+/* Graduandos */
+.search{position:relative}
+.search .ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted);width:20px;height:20px}
+.search input{width:100%;font:inherit;font-size:1rem;padding:14px 14px 14px 46px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);outline:none}
+.search input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(27,58,107,.12)}
+.stats{text-align:center;color:var(--muted);font-size:.84rem;margin:12px 0 4px}
+details.carrera{background:#fff;border:1px solid var(--line);border-radius:14px;margin-top:12px;overflow:hidden}
+details.carrera summary{list-style:none;display:flex;align-items:center;gap:12px;padding:16px 18px;cursor:pointer;font-weight:700;color:var(--navy)}
+details.carrera summary::-webkit-details-marker{display:none}
+summary .nom{flex:1}
+summary .cnt{font-size:.74rem;font-weight:700;color:var(--gold-ink);background:#FBF5D8;border-radius:999px;padding:3px 10px}
+summary .chev{transition:transform .2s;color:var(--muted)}
+details[open] summary .chev{transform:rotate(180deg)}
+ul.nombres{list-style:none;margin:0;padding:0 18px 12px}
+ul.nombres li{display:flex;align-items:center;gap:8px;padding:10px 0;border-top:1px solid var(--line-soft);font-size:.96rem;break-inside:avoid}
+ul.nombres li .ico{color:var(--gold-deep);fill:var(--gold);stroke:var(--gold-deep);width:15px;height:15px}
+@media (min-width:640px){ul.nombres{columns:2;column-gap:28px}}
+mark{background:rgba(232,207,69,.5);color:inherit;border-radius:3px;padding:0 1px}
+.vacio{text-align:center;color:var(--muted);padding:22px 10px;font-size:.92rem}
+
+/* Distinciones */
+.premios{display:grid;gap:12px}
+@media (min-width:560px){.premios{grid-template-columns:1fr 1fr}}
+.premio{position:relative;border-radius:16px;padding:22px 20px 20px;color:#fff;background:linear-gradient(145deg,var(--navy-soft),var(--navy-deep));overflow:hidden}
+.premio::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;border:1px solid rgba(232,207,69,.25)}
+.premio .eyebrow{color:var(--gold);font-size:.66rem;letter-spacing:.18em}
+.premio h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;line-height:1.15;margin:.4em 0 .25em}
+.premio p{margin:0;font-size:.84rem;opacity:.85}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (min-width:640px){.galeria{grid-template-columns:repeat(3,1fr)}}
+.galeria button{padding:0;border:0;border-radius:10px;overflow:hidden;background:var(--line);aspect-ratio:4/3}
+.galeria button:first-child{grid-column:span 2;aspect-ratio:auto}
+@media (max-width:639px){.galeria button:last-child:nth-child(even){grid-column:span 2;aspect-ratio:16/9}}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.galeria button:hover img{transform:scale(1.04)}
+dialog.visor{width:100%;height:100%;max-width:100vw;max-height:100vh;margin:0;padding:0;border:0;background:rgba(6,16,34,.985);color:#fff}
+dialog.visor::backdrop{background:transparent}
+.visor-in{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 12px 24px;gap:14px;touch-action:pan-y}
+.visor img{max-height:76vh;max-width:min(100%,1100px);object-fit:contain;border-radius:6px}
+.visor p{margin:0;font-size:.9rem;opacity:.9;text-align:center}
+.vbtn{position:absolute;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center}
+.vbtn:hover{background:rgba(255,255,255,.22)}
+.vprev,.vnext{background:rgba(6,16,34,.55);border:1px solid rgba(255,255,255,.25)}
+.vcerrar{top:12px;right:12px}.vprev{left:10px;top:calc(50% - 23px)}.vnext{right:10px;top:calc(50% - 23px)}
+
+/* Mensaje y mesa */
+.mensaje{padding:26px 22px;border-left:3px solid var(--gold-deep)}
+.mensaje p{font-family:var(--serif);font-size:1.18rem;line-height:1.6;margin:0 0 .8em}
+.mensaje p:first-child{font-style:italic;font-weight:600;color:var(--navy)}
+.firma{margin-top:14px;font-weight:700;color:var(--navy);font-size:.92rem}
+.firma span{display:block;font-weight:500;color:var(--muted);font-size:.84rem}
+.mesa{display:grid;gap:10px;margin-top:14px}
+@media (min-width:560px){.mesa{grid-template-columns:1fr 1fr}}
+.mesa div{padding:14px 16px}
+.mesa .eyebrow{color:var(--gold-ink);font-size:.64rem;letter-spacing:.14em}
+.mesa strong{display:block;margin-top:4px;color:var(--ink);font-weight:600}
+.mesa strong.pend{color:var(--muted);font-weight:500;font-style:italic}
+.gracias{font-family:var(--serif);font-size:1.15rem;line-height:1.6;text-align:center;color:var(--ink);margin:24px auto 0;max-width:600px}
+
+/* Información */
+.info{display:grid;gap:10px}
+@media (min-width:560px){.info{grid-template-columns:1fr 1fr}}
+.info .card{display:flex;gap:14px;padding:16px}
+.info .circ{flex:none;width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center}
+.info h3{margin:0;font-size:.95rem;color:var(--navy)}
+.info p{margin:3px 0 0;font-size:.87rem;color:var(--muted)}
+.info a{color:var(--navy);font-weight:600}
+
+/* Compartir */
+.compartir{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff;border-radius:20px;padding:30px 20px;text-align:center}
+.compartir h2{font-family:var(--serif);font-weight:600;font-size:2rem;margin:.15em 0 .3em}
+.qr{width:190px;height:190px;margin:18px auto;background:#fff;border-radius:16px;padding:12px}
+.compartir p{margin:0 auto;max-width:420px;font-size:.88rem;opacity:.88}
+.compartir .actions{margin-top:20px}
+@media (min-width:640px){.compartir .actions{grid-template-columns:1fr 1fr;max-width:440px}}
+.aviso{margin-top:14px!important;font-size:.76rem!important;color:var(--gold)}
+
+/* Pie */
+footer{margin-top:56px;background:#fff;border-top:3px solid var(--gold-deep);text-align:center;padding:30px 16px 40px;color:var(--muted);font-size:.82rem;line-height:1.7}
+footer img{height:40px;width:auto;margin:0 auto 10px}
+footer .lema{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--navy);margin:0 0 8px}
+footer a{color:var(--navy);text-decoration:none;font-weight:600}
+
+/* Versión impresa */
+.solo-print{display:none}
+@media print{
+  @page{size:letter;margin:13mm 14mm}
+  body{background:#fff;font-size:10pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .borrador,.tabs,.actions,.countdown,#galeria,#compartir,#info,.search,.stats,.nota,.vacio,footer .redes{display:none!important}
+  .top{border:0;padding:0 0 6pt}
+  .top img{height:40pt}
+  .hero{background:none;color:var(--navy);padding:4pt 0 0}
+  .hero h1{font-size:30pt}
+  .promo{color:var(--gold-ink);font-size:15pt}
+  .rule{margin:8pt auto}
+  .where{opacity:1}
+  main{max-width:none;padding:0}
+  section{padding:14pt 0 0}
+  .head{margin-bottom:8pt}
+  .head h2{font-size:19pt}
+  .card{border:0}
+  #programa{padding-top:10pt}
+  #programa .head p{display:none}
+  .timeline{padding:2pt 0 0}
+  .timeline li{grid-template-columns:42pt 14pt 1fr;column-gap:8pt;padding-bottom:5.5pt;break-inside:avoid}
+  .t-time{font-size:10pt;line-height:1.45}
+  .t-dot::before{top:3pt;width:9pt;height:9pt;left:2pt}
+  .t-dot::after{left:6pt;top:13pt;bottom:-7pt}
+  .t-body h3{display:inline;font-size:10pt}
+  .t-body p{display:inline;font-size:9pt}
+  .t-body p::before{content:" · "}
+  #graduandos{padding-top:16pt}
+  .head{break-after:avoid}
+  details.carrera{border:0;border-top:1px solid var(--line);border-radius:0;margin-top:6pt}
+  details.carrera summary{padding:6pt 0;break-after:avoid}
+  summary .chev{display:none}
+  ul.nombres{columns:3;padding:0}
+  ul.nombres li{padding:2pt 0;border:0;font-size:9pt}
+  #distinciones{padding-top:10pt}
+  #distinciones .head p{display:none}
+  .premios{grid-template-columns:1fr 1fr;gap:6pt}
+  .premio{color:var(--ink);background:none;border:1px solid var(--line);border-radius:8pt;padding:7pt 10pt;break-inside:avoid}
+  .premio::after{display:none}
+  .premio .eyebrow{color:var(--gold-ink)}
+  .premio h3{font-size:13pt}
+  #mensaje{break-before:page}
+  .mensaje{padding:6pt 12pt}
+  .mensaje p{font-size:11.5pt}
+  footer{margin-top:18pt;padding:10pt 0 0;border-top:1px solid var(--gold-deep)}
+  footer img{height:26pt}
+  .solo-print{display:block}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-6.2-7-11.8a7 7 0 0 1 14 0c0 5.6-7 11.8-7 11.8z"/><circle cx="12" cy="9.6" r="2.6"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4.5-4.5"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+  <symbol id="i-gown" viewBox="0 0 24 24"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.3v4.4c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.4M22 9.5v5"/></symbol>
+  <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 3 3.5 5.5l1.8 4L7 8.8V21h10V8.8l1.7.7 1.8-4L16 3c-.6 1.6-2.2 2.6-4 2.6S8.6 4.6 8 3z"/></symbol>
+  <symbol id="i-metro" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8.5 21l1.5-4M15.5 21 14 17"/><circle cx="9" cy="14" r=".6"/><circle cx="15" cy="14" r=".6"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M4 8h3l1.6-2.5h6.8L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 19.5 5.6 16A8 8 0 1 1 8.4 18.6z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6M7 17H4.5a1.5 1.5 0 0 1-1.5-1.5v-5A1.5 1.5 0 0 1 4.5 9h15a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1-1.5 1.5H17"/><path d="M7 14h10v7H7z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+</svg>
+
+<div class="borrador" id="borrador">BORRADOR · Nombres, horarios y fotos son de ejemplo — no compartir</div>
+
+<header class="top"><img src="img/logo-enfa.png" alt="ENFA" width="806" height="290"></header>
+
+<div class="hero">
+  <p class="eyebrow" id="h-inst"></p>
+  <h1 id="h-titulo"></h1>
+  <p class="promo" id="h-promo"></p>
+  <div class="rule"><i></i></div>
+  <p class="when" id="h-when"></p>
+  <p class="when hora" id="h-hora"></p>
+  <p class="where" id="h-where"></p>
+  <div class="countdown" id="h-count"></div>
+  <div class="actions">
+    <a class="btn btn-gold" href="#programa"><svg class="ico"><use href="#i-list"/></svg>Ver programa</a>
+    <a class="btn btn-line" id="btn-mapa" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Cómo llegar</a>
+    <button class="btn btn-line" id="btn-cal" type="button"><svg class="ico"><use href="#i-cal"/></svg>Agregar al calendario</button>
+  </div>
+</div>
+
+<nav class="tabs" aria-label="Secciones">
+  <div class="tabs-in">
+    <a href="#programa">Programa</a>
+    <a href="#graduandos">Graduandos</a>
+    <a href="#distinciones">Distinciones</a>
+    <a href="#galeria">Galería</a>
+    <a href="#mensaje">Mensaje</a>
+    <a href="#info">Información</a>
+  </div>
+</nav>
+
+<main>
+  <section id="programa">
+    <div class="head"><p class="eyebrow">Ceremonia</p><h2>Programa</h2><p id="prog-sub"></p></div>
+    <div class="card"><ol class="timeline" id="timeline"></ol></div>
+    <p class="nota">Los horarios son referenciales y pueden ajustarse durante la ceremonia.</p>
+  </section>
+
+  <section id="graduandos">
+    <div class="head"><p class="eyebrow">Promoción 2026</p><h2>Graduandos</h2></div>
+    <div class="search">
+      <svg class="ico"><use href="#i-search"/></svg>
+      <label class="sr" for="buscar">Buscar graduando</label>
+      <input id="buscar" type="search" placeholder="Busca tu nombre o el de tu familiar" autocomplete="off">
+    </div>
+    <p class="stats" id="stats"></p>
+    <div id="carreras"></div>
+    <p class="vacio" id="vacio" hidden>No encontramos ese nombre. Prueba solo con el apellido.</p>
+  </section>
+
+  <section id="distinciones">
+    <div class="head"><p class="eyebrow">Reconocimientos</p><h2>Distinciones</h2><p>Premios entregados a graduandos destacados de la promoción.</p></div>
+    <div class="premios" id="premios"></div>
+  </section>
+
+  <section id="galeria">
+    <div class="head"><p class="eyebrow">Recuerdos</p><h2>Nuestros alumnos</h2><p id="gal-sub">Momentos de clases, talleres y prácticas.</p></div>
+    <div class="galeria" id="fotos"></div>
+  </section>
+
+  <section id="mensaje">
+    <div class="head"><p class="eyebrow">Palabras</p><h2 id="msj-titulo"></h2></div>
+    <div class="card mensaje" id="msj"></div>
+    <div class="head" style="margin:40px 0 0"><p class="eyebrow">Ceremonia</p><h2 style="font-size:1.8rem">Mesa de honor</h2></div>
+    <div class="mesa" id="mesa"></div>
+    <p class="gracias" id="gracias"></p>
+  </section>
+
+  <section id="info">
+    <div class="head"><p class="eyebrow">Para tu visita</p><h2>Información</h2></div>
+    <div class="info" id="info-list"></div>
+  </section>
+
+  <section id="compartir">
+    <div class="compartir">
+      <p class="eyebrow" style="color:var(--gold)">Comparte este programa</p>
+      <h2>¿Viene tu familia?</h2>
+      <p>Muéstrales este código: lo escanean con la cámara del celular y abren el programa.</p>
+      <img class="qr" src="img/qr.svg" alt="Código QR que abre este programa" width="190" height="190">
+      <div class="actions">
+        <button class="btn btn-gold" id="btn-share" type="button"><svg class="ico"><use href="#i-share"/></svg><span>Compartir enlace</span></button>
+        <button class="btn btn-line" id="btn-print" type="button"><svg class="ico"><use href="#i-print"/></svg>Imprimir programa</button>
+      </div>
+      <p class="aviso" id="qr-aviso"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="img/logo-enfa.png" alt="ENFA" width="806" height="290">
+  <p class="lema" id="f-lema"></p>
+  <div id="f-datos"></div>
+</footer>
+
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <div class="visor-in" id="visor-in">
+    <img id="v-img" alt="">
+    <p id="v-txt"></p>
+  </div>
+  <button class="vbtn vcerrar" id="v-cerrar" type="button" aria-label="Cerrar"><svg class="ico"><use href="#i-x"/></svg></button>
+  <button class="vbtn vprev" id="v-prev" type="button" aria-label="Foto anterior"><svg class="ico"><use href="#i-left"/></svg></button>
+  <button class="vbtn vnext" id="v-next" type="button" aria-label="Foto siguiente"><svg class="ico"><use href="#i-right"/></svg></button>
+</dialog>
+
+<script>
+/* =====================================================================
+   DATOS DE LA CEREMONIA — todo lo editable está aquí.
+   BORRADOR: nombres, horarios, fotos y textos son de EJEMPLO.
+   ===================================================================== */
+const CONFIG = {
+  borrador: true,                                   // false = quita el aviso amarillo
+  urlPublica: 'https://titulacion.enfa.cl',         // dirección definitiva (la que va en el QR)
+  institucion: 'ENFA Universitas',
+  titulo: 'Ceremonia de Titulación',
+  promocion: 'Promoción 2026',
+  fechaTexto: 'Viernes 11 de diciembre de 2026',
+  horaTexto: '19:00 hrs',
+  inicio: '2026-12-11T19:00:00-03:00',              // hora de Chile (verano = UTC-3)
+  fin:    '2026-12-11T22:00:00-03:00',
+  lugar: 'Aula Magna ENFA Universitas',
+  direccion: 'Av. Bellavista 0379, Providencia',
+  mapa: 'https://www.google.com/maps/search/?api=1&query=Av.+Bellavista+0379,+Providencia,+Santiago',
+
+  // tipo: 'diplomas' (punto dorado) · 'cierre' (punto azul) · '' (normal)
+  programa: [
+    { hora:'18:30', titulo:'Recepción de invitados', detalle:'Acreditación en el hall de acceso' },
+    { hora:'19:00', titulo:'Ingreso de los graduandos', detalle:'Marcha de entrada' },
+    { hora:'19:05', titulo:'Himno Nacional de Chile' },
+    { hora:'19:10', titulo:'Palabras de bienvenida', detalle:'Rector de ENFA Universitas' },
+    { hora:'19:20', titulo:'Saludo del invitado de honor', detalle:'Representante de la industria farmacéutica' },
+    { hora:'19:30', titulo:'Entrega de diplomas', detalle:'Visitador Médico', tipo:'diplomas' },
+    { hora:'19:45', titulo:'Entrega de diplomas', detalle:'Asesor Científico (online)', tipo:'diplomas' },
+    { hora:'19:55', titulo:'Momento musical', detalle:'Intervención artística' },
+    { hora:'20:05', titulo:'Entrega de diplomas', detalle:'Auxiliar de Farmacia', tipo:'diplomas' },
+    { hora:'20:20', titulo:'Entrega de diplomas', detalle:'Dermo Coach Farmacia y Belleza', tipo:'diplomas' },
+    { hora:'20:30', titulo:'Reconocimientos y distinciones', detalle:'Premios a graduandos destacados' },
+    { hora:'20:40', titulo:'Palabras de la promoción', detalle:'Graduanda representante del curso' },
+    { hora:'20:50', titulo:'Cierre y fotografía oficial', detalle:'Foto de la Promoción 2026 en el escenario' },
+    { hora:'21:00', titulo:'Cóctel de celebración', detalle:'Salón principal', tipo:'cierre' }
+  ],
+
+  // Un asterisco (*) al final del nombre marca a quien recibe una distinción
+  carreras: [
+    { nombre:'Visitador Médico', graduandos:[
+      'Camila Andrea Rojas Fuentes*','Matías Ignacio Soto Herrera','Valentina Paz Muñoz Contreras','Sebastián Alejandro Díaz Morales',
+      'Francisca Belén Torres Vergara','Diego Andrés Reyes Castillo','Constanza Isidora Araya Pizarro','Felipe Tomás Espinoza Lagos',
+      'Javiera Antonia Navarro Bustos','Nicolás Esteban Carrasco Salinas','Catalina Fernanda Vidal Orellana','Benjamín José Riquelme Tapia',
+      'María José Saavedra Cáceres','Cristóbal Andrés Paredes Gallardo','Daniela Ignacia Figueroa Molina','Tomás Alonso Sepúlveda Rivas' ]},
+    { nombre:'Asesor Científico (online)', graduandos:[
+      'Andrés Felipe Moya Concha','Natalia Verónica Bravo Salgado*','Pablo Ignacio Medina Arriagada','Ximena Alejandra Toledo Campos',
+      'Mauricio Patricio Aravena Núñez','Lorena Isabel Cornejo Villalobos','Ricardo Esteban Bustamante Soto','Carla Daniela Jiménez Pozo' ]},
+    { nombre:'Auxiliar de Farmacia', graduandos:[
+      'Antonia Sofía Gutiérrez León*','Joaquín Eduardo Valenzuela Ortiz','Fernanda Alejandra Pérez Jara','Ignacio Rodrigo Flores Bravo',
+      'Martina Josefa Castro Aguilera','Rodrigo Hernán Leiva Cortés','Paula Andrea Miranda Olivares','Vicente Alberto Garrido Fuentealba',
+      'Carolina Beatriz Alarcón Toro','Gabriel Antonio Zúñiga Peña','Macarena Soledad Henríquez Vega','Héctor Manuel Cárdenas Ríos',
+      'Bárbara Constanza Sanhueza Mella','Luis Felipe Ortega Yáñez' ]},
+    { nombre:'Dermo Coach Farmacia y Belleza', graduandos:[
+      'Florencia Ignacia Cifuentes Parra*','Josefa Valentina Godoy Arancibia','Renata Paz Escobar Lillo','Pía Alejandra Sanzana Mora',
+      'Gabriela Fernanda Ulloa Quiroz','Trinidad Belén Maturana Reyes','Amanda Sofía Ibarra Correa','Claudia Marcela Pino Montecinos',
+      'Karina Andrea Vásquez Huerta','Emilia Antonia Fuenzalida Rojas' ]}
+  ],
+
+  distinciones: [
+    { premio:'Mejor promedio de la promoción', nombre:'Camila Andrea Rojas Fuentes', detalle:'Visitador Médico · Nota final 6,8' },
+    { premio:'Excelencia en práctica profesional', nombre:'Antonia Sofía Gutiérrez León', detalle:'Auxiliar de Farmacia' },
+    { premio:'Mejor proyecto de titulación', nombre:'Natalia Verónica Bravo Salgado', detalle:'Asesor Científico (online)' },
+    { premio:'Premio Espíritu ENFA', nombre:'Florencia Ignacia Cifuentes Parra', detalle:'Dermo Coach Farmacia y Belleza · Compañerismo y compromiso' }
+  ],
+
+  galeriaNota: 'Fotos referenciales de banco de imágenes: se reemplazan por fotos reales de los alumnos.',
+  galeria: [
+    { src:'img/galeria/01.jpg', texto:'Clase de farmacología' },
+    { src:'img/galeria/02.jpg', texto:'Taller de técnicas de presentación' },
+    { src:'img/galeria/03.jpg', texto:'Práctica profesional en farmacia' },
+    { src:'img/galeria/04.jpg', texto:'Atención de público en mesón' },
+    { src:'img/galeria/05.jpg', texto:'Laboratorio de dermocosmética' },
+    { src:'img/galeria/06.jpg', texto:'Clases en línea · Campus ENFA 24/7' },
+    { src:'img/galeria/07.jpg', texto:'Role play de visita médica' },
+    { src:'img/galeria/08.jpg', texto:'Visita a médicos' }
+  ],
+
+  mensaje: {
+    titulo: 'Mensaje del Rector',
+    parrafos: [
+      'Queridos graduandos y familias:',
+      'Hoy celebramos el esfuerzo de quienes compatibilizaron trabajo, estudio y familia para llegar a esta noche. Cada uno de ustedes eligió formarse en un área donde el conocimiento y la confianza marcan la diferencia: la salud de las personas.',
+      'Les invitamos a ejercer con rigor, ética y cercanía, y a recordar que el aprendizaje no termina hoy. ENFA seguirá siendo su casa.',
+      'A sus familias, gracias por el apoyo que hizo posible este logro. ¡Felicitaciones, Promoción 2026!'
+    ],
+    firma: 'Rector',
+    cargo: 'ENFA Universitas'
+  },
+
+  // nombre vacío = se muestra "Nombre por confirmar"
+  mesa: [
+    { cargo:'Rector', nombre:'' },
+    { cargo:'Directora Académica', nombre:'' },
+    { cargo:'Invitado de honor', nombre:'' },
+    { cargo:'Coordinación de programas', nombre:'' }
+  ],
+
+  agradecimientos: 'Agradecemos a nuestros docentes y relatores, a los laboratorios, farmacias y empresas que abrieron sus puertas para las prácticas, y a cada familia que acompañó este camino.',
+
+  info: [
+    { icono:'clock', titulo:'Llegada', texto:'Te recomendamos llegar a las 18:30. La ceremonia comienza a las 19:00.' },
+    { icono:'gown',  titulo:'Graduandos', texto:'Presentarse a las 18:00 en la Sala 2 para recibir toga y birrete.' },
+    { icono:'shirt', titulo:'Vestimenta', texto:'Formal.' },
+    { icono:'metro', titulo:'Cómo llegar', texto:'Metro Baquedano (Líneas 1 y 5). Estacionamiento limitado.', link:'mapa', linkTexto:'Abrir mapa' },
+    { icono:'cam',   titulo:'Fotografías', texto:'Las fotos oficiales se publicarán en esta misma página a partir del lunes 14 de diciembre.' },
+    { icono:'chat',  titulo:'Consultas', texto:'WhatsApp +56 9 9441 9258', link:'https://wa.me/56994419258', linkTexto:'Escribir por WhatsApp' }
+  ],
+
+  pie: {
+    lema: 'Cada día más profesionales con futuro',
+    lineas: [
+      'OTEC acreditado por SENCE · Certificación NCh 2728',
+      'Av. Bellavista 0379, Providencia · Santiago',
+      '+56 9 9441 9258 · +56 2 2732 5394',
+      '<a href="mailto:admision@enfa.cl">admision@enfa.cl</a> · <a href="https://www.enfa.cl" target="_blank" rel="noopener">www.enfa.cl</a>'
+    ]
+  }
+};
+
+/* ===================== No es necesario editar bajo esta línea ===================== */
+(function () {
+  const C = CONFIG;
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const icon = (id, cls) => `<svg class="ico${cls ? ' ' + cls : ''}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+
+  // Portada
+  $('borrador').hidden = !C.borrador;
+  $('h-inst').textContent = C.institucion;
+  $('h-titulo').textContent = C.titulo;
+  $('h-promo').textContent = C.promocion;
+  $('h-when').textContent = C.fechaTexto;
+  $('h-hora').textContent = C.horaTexto;
+  $('h-where').textContent = C.lugar + ' · ' + C.direccion;
+  $('btn-mapa').href = C.mapa;
+
+  // Cuenta regresiva
+  (function () {
+    const ini = new Date(C.inicio), fin = new Date(C.fin), now = new Date();
+    const dia = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    const n = Math.round((dia(ini) - dia(now)) / 864e5);
+    let t = '';
+    if (now > fin) t = 'Gracias por acompañarnos';
+    else if (n > 1) t = 'Faltan ' + n + ' días';
+    else if (n === 1) t = '¡Es mañana!';
+    else t = '¡Hoy es el gran día!';
+    $('h-count').textContent = t;
+  })();
+
+  // Programa
+  $('prog-sub').textContent = C.fechaTexto;
+  $('timeline').innerHTML = C.programa.map(p => `
+    <li class="${p.tipo || ''}">
+      <span class="t-time">${esc(p.hora)}</span><span class="t-dot"></span>
+      <div class="t-body"><h3>${esc(p.titulo)}</h3>${p.detalle ? `<p>${esc(p.detalle)}</p>` : ''}</div>
+    </li>`).join('');
+
+  // Graduandos
+  let total = 0;
+  const datos = C.carreras.map(c => ({
+    nombre: c.nombre,
+    lista: c.graduandos.map(g => { total++; const d = /\*$/.test(g); const n = g.replace(/\*$/, '').trim(); return { n, d, k: norm(n) }; })
+  }));
+  $('stats').textContent = total + ' graduandos · ' + datos.length + ' programas';
+  $('carreras').innerHTML = datos.map((c, i) => `
+    <details class="carrera" open data-i="${i}">
+      <summary><span class="nom">${esc(c.nombre)}</span><span class="cnt">${c.lista.length}</span>${icon('chev', 'chev')}</summary>
+      <ul class="nombres">${c.lista.map(g => `<li data-k="${esc(g.k)}"><span class="txt">${esc(g.n)}</span>${g.d ? icon('star') + '<span class="sr">(distinción)</span>' : ''}</li>`).join('')}</ul>
+    </details>`).join('');
+
+  const marcar = (txt, q) => {
+    if (!q) return esc(txt);
+    const k = norm(txt), i = k.indexOf(q);
+    if (i < 0) return esc(txt);
+    return esc(txt.slice(0, i)) + '<mark>' + esc(txt.slice(i, i + q.length)) + '</mark>' + esc(txt.slice(i + q.length));
+  };
+  $('buscar').addEventListener('input', e => {
+    const q = norm(e.target.value.trim());
+    let hits = 0;
+    document.querySelectorAll('details.carrera').forEach(det => {
+      const c = datos[det.dataset.i]; let n = 0;
+      det.querySelectorAll('li').forEach((li, j) => {
+        const ok = !q || li.dataset.k.includes(q);
+        li.hidden = !ok; if (ok) n++;
+        li.querySelector('.txt').innerHTML = marcar(c.lista[j].n, q);
+      });
+      det.hidden = n === 0;
+      if (q && n) det.open = true;
+      det.querySelector('.cnt').textContent = q ? n + ' de ' + c.lista.length : c.lista.length;
+      hits += n;
+    });
+    $('vacio').hidden = hits > 0;
+  });
+
+  // Distinciones
+  $('premios').innerHTML = C.distinciones.map(d => `
+    <div class="premio"><p class="eyebrow">${esc(d.premio)}</p><h3>${esc(d.nombre)}</h3><p>${esc(d.detalle || '')}</p></div>`).join('');
+
+  // Galería + visor
+  if (C.borrador && C.galeriaNota) $('gal-sub').textContent = C.galeriaNota;
+  $('fotos').innerHTML = C.galeria.map((f, i) => `
+    <button type="button" data-i="${i}" aria-label="Ampliar foto: ${esc(f.texto)}"><img src="${esc(f.src)}" alt="${esc(f.texto)}" loading="lazy"></button>`).join('');
+  const visor = $('visor'); let actual = 0;
+  const ver = i => { actual = (i + C.galeria.length) % C.galeria.length; const f = C.galeria[actual]; $('v-img').src = f.src; $('v-img').alt = f.texto; $('v-txt').textContent = f.texto + '  ·  ' + (actual + 1) + ' / ' + C.galeria.length; };
+  $('fotos').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; ver(+b.dataset.i); visor.showModal(); });
+  $('v-cerrar').onclick = () => visor.close();
+  $('v-prev').onclick = () => ver(actual - 1);
+  $('v-next').onclick = () => ver(actual + 1);
+  visor.addEventListener('click', e => { if (e.target.id === 'visor-in') visor.close(); });
+  visor.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') ver(actual - 1); if (e.key === 'ArrowRight') ver(actual + 1); });
+  let x0 = null;
+  $('visor-in').addEventListener('pointerdown', e => { x0 = e.clientX; });
+  $('visor-in').addEventListener('pointerup', e => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 50) ver(actual + (dx < 0 ? 1 : -1)); });
+
+  // Mensaje, mesa, agradecimientos
+  $('msj-titulo').textContent = C.mensaje.titulo;
+  $('msj').innerHTML = C.mensaje.parrafos.map(p => `<p>${esc(p)}</p>`).join('') +
+    `<div class="firma">${esc(C.mensaje.firma)}<span>${esc(C.mensaje.cargo)}</span></div>`;
+  $('mesa').innerHTML = C.mesa.map(m => `
+    <div class="card"><p class="eyebrow">${esc(m.cargo)}</p>${m.nombre ? `<strong>${esc(m.nombre)}</strong>` : '<strong class="pend">Nombre por confirmar</strong>'}</div>`).join('');
+  $('gracias').textContent = C.agradecimientos;
+
+  // Información
+  $('info-list').innerHTML = C.info.map(it => {
+    const href = it.link === 'mapa' ? C.mapa : it.link;
+    return `<div class="card"><span class="circ">${icon(it.icono)}</span><div><h3>${esc(it.titulo)}</h3><p>${esc(it.texto)}${href ? `<br><a href="${esc(href)}" target="_blank" rel="noopener">${esc(it.linkTexto || 'Abrir')}</a>` : ''}</p></div></div>`;
+  }).join('');
+
+  // Pie
+  $('f-lema').textContent = C.pie.lema;
+  $('f-datos').innerHTML = C.pie.lineas.join('<br>');
+
+  // Aviso del QR mientras sea borrador
+  $('qr-aviso').textContent = C.borrador ? 'Borrador: el código apunta a ' + C.urlPublica.replace(/^https?:\/\//, '') + ', dirección que aún no existe.' : '';
+
+  // Calendario (.ics)
+  $('btn-cal').addEventListener('click', () => {
+    const f = d => new Date(d).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    const e = s => String(s).replace(/([,;\\])/g, '\\$1');
+    const ics = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ENFA Universitas//Titulacion//ES', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      'BEGIN:VEVENT', 'UID:titulacion-' + C.inicio.slice(0, 10) + '@enfa.cl', 'DTSTAMP:' + f(new Date()),
+      'DTSTART:' + f(C.inicio), 'DTEND:' + f(C.fin),
+      'SUMMARY:' + e(C.titulo + ' ENFA · ' + C.promocion),
+      'LOCATION:' + e(C.lugar + ', ' + C.direccion),
+      'DESCRIPTION:' + e('Programa de la ceremonia: ' + C.urlPublica), 'URL:' + C.urlPublica,
+      'BEGIN:VALARM', 'TRIGGER:-PT3H', 'ACTION:DISPLAY', 'DESCRIPTION:' + e(C.titulo + ' ENFA'), 'END:VALARM',
+      'END:VEVENT', 'END:VCALENDAR'
+    ].join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    a.download = 'titulacion-enfa.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  // Compartir e imprimir
+  $('btn-share').addEventListener('click', async () => {
+    const data = { title: C.titulo + ' ENFA', text: C.titulo + ' · ' + C.fechaTexto, url: C.urlPublica };
+    const lbl = $('btn-share').querySelector('span');
+    try {
+      if (navigator.share) { await navigator.share(data); return; }
+      await navigator.clipboard.writeText(C.urlPublica);
+      lbl.textContent = 'Enlace copiado';
+    } catch (err) { if (err && err.name !== 'AbortError') lbl.textContent = C.urlPublica.replace(/^https?:\/\//, ''); }
+    setTimeout(() => { lbl.textContent = 'Compartir enlace'; }, 2500);
+  });
+  $('btn-print').addEventListener('click', () => window.print());
+  window.addEventListener('beforeprint', () => document.querySelectorAll('details.carrera').forEach(d => { d.open = true; d.hidden = false; }));
+
+  // Pestaña activa según la sección visible
+  const tabs = [...document.querySelectorAll('.tabs a')];
+  const obs = new IntersectionObserver(ents => {
+    ents.forEach(en => {
+      if (!en.isIntersecting) return;
+      tabs.forEach(a => {
+        const on = a.getAttribute('href') === '#' + en.target.id;
+        a.classList.toggle('on', on);
+        if (on) a.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  tabs.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) obs.observe(s); });
+})();
+</script>
+</body>
+</html>
