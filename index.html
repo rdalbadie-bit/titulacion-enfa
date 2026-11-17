@@ -52,8 +52,14 @@ button{font:inherit;cursor:pointer}
 .when.hora{color:var(--gold);font-size:1.25rem;margin-top:2px}
 @media print{.when.hora{color:var(--navy)}}
 .where{margin:.35em 0 0;font-size:.93rem;opacity:.9}
-.countdown{display:inline-block;margin-top:20px;padding:6px 16px;border:1px solid rgba(232,207,69,.55);border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold)}
+.countdown{margin:22px auto 0}
 .countdown:empty{display:none}
+.cd-cap{margin:0 0 8px;font-size:.66rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.cd{display:flex;justify-content:center;gap:10px}
+.cd .u{min-width:76px;padding:9px 8px 8px;border:1px solid rgba(232,207,69,.45);border-radius:12px;background:rgba(15,42,79,.45)}
+.cd .n{display:block;font-weight:700;font-size:1.7rem;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}
+.cd .l{display:block;margin-top:4px;font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.cd-msg{display:inline-block;padding:7px 18px;border:1px solid rgba(232,207,69,.55);border-radius:999px;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--gold)}
 .actions{display:grid;gap:10px;max-width:420px;margin:26px auto 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 18px;border-radius:12px;font-weight:600;font-size:.92rem;text-decoration:none;border:1.5px solid transparent;transition:transform .15s,background .15s}
 .btn:active{transform:scale(.98)}
@@ -381,6 +387,7 @@ const CONFIG = {
   horaTexto: '19:00 hrs',
   inicio: '2026-11-26T18:30:00-03:00',              // hora de Chile (verano = UTC-3)
   fin:    '2026-11-26T21:00:00-03:00',
+  cuentaRegresiva: '2026-11-26T19:00:00-03:00',     // la cuenta regresiva llega a cero al inicio de la ceremonia
   lugar: 'Auditorio Espacio CEA',
   direccion: 'Antonio Bellet 314, Providencia',
   mapa: 'https://www.google.com/maps/search/?api=1&query=Antonio+Bellet+314,+Providencia,+Santiago,+Chile',
@@ -477,17 +484,25 @@ const CONFIG = {
   $('h-where').textContent = C.lugar + ' · ' + C.direccion;
   $('btn-mapa').href = C.mapa;
 
-  // Cuenta regresiva
+  // Cuenta regresiva (días, horas y minutos hasta el inicio de la ceremonia)
   (function () {
-    const ini = new Date(C.inicio), fin = new Date(C.fin), now = new Date();
-    const dia = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
-    const n = Math.round((dia(ini) - dia(now)) / 864e5);
-    let t = '';
-    if (now > fin) t = 'Gracias por acompañarnos';
-    else if (n > 1) t = 'Faltan ' + n + ' días';
-    else if (n === 1) t = '¡Es mañana!';
-    else t = '¡Hoy es el gran día!';
-    $('h-count').textContent = t;
+    const el = $('h-count');
+    const meta = new Date(C.cuentaRegresiva || C.inicio), fin = new Date(C.fin);
+    const pad = n => String(n).padStart(2, '0');
+    const u = (n, l) => `<div class="u"><span class="n">${n}</span><span class="l">${l}</span></div>`;
+    let timer = null;
+    const tick = () => {
+      const now = new Date();
+      if (now >= fin) { el.innerHTML = '<span class="cd-msg">Gracias por acompañarnos</span>'; clearInterval(timer); return; }
+      if (now >= meta) { el.innerHTML = '<span class="cd-msg">¡La ceremonia está en curso!</span>'; return; }
+      const min = Math.ceil((meta - now) / 6e4);
+      const d = Math.floor(min / 1440), h = Math.floor((min % 1440) / 60), m = min % 60;
+      el.innerHTML = '<p class="cd-cap">' + (d === 0 ? '¡Hoy es el gran día! · Faltan' : 'Faltan') + '</p>' +
+        '<div class="cd" role="timer" aria-label="Faltan ' + d + ' días, ' + h + ' horas y ' + m + ' minutos">' +
+        (d > 0 ? u(d, d === 1 ? 'día' : 'días') : '') + u(pad(h), h === 1 ? 'hora' : 'horas') + u(pad(m), m === 1 ? 'minuto' : 'minutos') + '</div>';
+    };
+    tick();
+    timer = setInterval(tick, 15000);
   })();
 
   // Programa
