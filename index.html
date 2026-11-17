@@ -187,12 +187,12 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
   body{background:#fff;font-size:10pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .borrador,.tabs,.actions,.countdown,#galeria,#compartir,#info,.search,.stats,.nota,.vacio,footer .redes{display:none!important}
   .top{border:0;padding:0 0 6pt}
-  .top img{height:34pt}
+  .top img{height:30pt}
   .hero{background:none;color:var(--navy);padding:2pt 0 0}
-  .hero h1{font-size:25pt}
+  .hero h1{font-size:23pt;margin-bottom:2pt}
   #graduandos .head .eyebrow{display:none}
   .promo{color:var(--gold-ink);font-size:15pt}
-  .rule{margin:4pt auto}
+  .rule{display:none}
   .where{opacity:1}
   main{max-width:none;padding:0}
   section{padding:14pt 0 0}
@@ -211,7 +211,7 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
   .t-body p::before{content:" · "}
   #graduandos{padding-top:10pt}
   .head{break-after:avoid}
-  details.carrera{border:0;border-top:1px solid var(--line);border-radius:0;margin-top:3pt}
+  details.carrera{border:0;border-top:1px solid var(--line);border-radius:0;margin-top:3pt;break-inside:avoid}
   details.carrera summary{padding:4pt 0;break-after:avoid}
   summary .chev{display:none}
   ul.nombres{columns:3;padding:0}
@@ -223,7 +223,8 @@ footer a{color:var(--navy);text-decoration:none;font-weight:600}
   .premio::after{display:none}
   .premio .eyebrow{color:var(--gold-ink)}
   .premio h3{font-size:13pt}
-  #oradores{break-before:page}
+  #oradores{padding-top:16pt}
+  #oradores .mesa,#enfa .mensaje{break-inside:avoid}
   #oradores .mesa{grid-template-columns:1fr 1fr;gap:4pt}
   #oradores .mesa div{padding:6pt 8pt}
   .mensaje{padding:6pt 12pt}
@@ -400,15 +401,20 @@ const CONFIG = {
 
   // Un asterisco (*) al final del nombre marca a quien recibe una distinción
   carreras: [
-    { nombre:'Coach en Dermo Belleza', graduandos:[
+    // Admisión DERMO
+    { nombre:'Diplomado – Coach en DermoBelleza', graduandos:[
       'Nicole Yanet Rodríguez González' ]},
-    { nombre:'Visitador Médico', graduandos:[
+    // Admisión VM.ON
+    { nombre:'Diplomado – Visitador Médico', graduandos:[
+      'Carol Edgardy Fuentes Salgado','Pamela Andrea Garcés Muñoz','César Augusto Morales Medina','Yordy Romario Morales Navarro',
+      'Yosleiny Gabriela Rojas Muñoz','Rosangel Mariana Sulbaran Silva' ]},
+    // Admisión VM.PRES
+    { nombre:'Diplomado – Visitador Médico y Asesor Científico', graduandos:[
       'Romina Angelina Acevedo Poblete','María José Baeza Sepúlveda','Catalina Paz Carrasco Parra','Dunipsy Lorena Cortez Romero',
-      'Cristel Selomit Fernández Ormeño','Carol Edgardy Fuentes Salgado','Francisca Tamara Gálvez Vidal','Pamela Andrea Garcés Muñoz',
-      'Karina Mabel González Fuentes','Yulmelia Alejandra Gudiño Ramírez','Pierangela Liseth Guerra La Rosa','Daniela Soledad Gutiérrez Orrego',
-      'Sofía Catalina Hinrichsen Carrasco','María Rosa Del Carmen Justo Valdéz','César Augusto Morales Medina','Yordy Romario Morales Navarro',
-      'Estefany Suggey Mundaca Leyva','Maydaleth Auxiliadora Pachano Navarro','Debora Camila Riffo Sepúlveda',
-      'Patricia Esther Rodríguez Rivas','Yosleiny Gabriela Rojas Muñoz','Abigail Rozas Velásquez','Rosangel Mariana Sulbaran Silva' ]}
+      'Cristel Selomit Fernández Ormeño','Francisca Tamara Gálvez Vidal','Karina Mabel González Fuentes','Yulmelia Alejandra Gudiño Ramírez',
+      'Pierangela Liseth Guerra La Rosa','Daniela Soledad Gutiérrez Orrego','Sofía Catalina Hinrichsen Carrasco','María Rosa Del Carmen Justo Valdéz',
+      'Estefany Suggey Mundaca Leyva','Maydaleth Auxiliadora Pachano Navarro','Debora Camila Riffo Sepúlveda','Patricia Esther Rodríguez Rivas',
+      'Abigail Rozas Velásquez' ]}
   ],
 
   // Vacío = la sección no se muestra. Formato: { premio:'', nombre:'', detalle:'' }
